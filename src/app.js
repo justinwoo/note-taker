@@ -18,7 +18,9 @@ var App = React.createClass({
     console.log('rendered state:', this.state);
     return (
       <article>
-        <Sheet/>
+        <header>Header</header>
+        <Sheet appState={this.state}/>
+        <footer>Footer</footer>
       </article>
     );
   }

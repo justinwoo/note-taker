@@ -1,13 +1,17 @@
 import * as React from 'react';
 
-var sheetWidth = 940;
+import {sheetWidth} from '../globals';
+import Staff from './staff';
+import Cursor from './cursor';
 
 var Sheet = React.createClass({
-  render: () => {
+  render: function () {
+    var appState = this.props.appState;
     return (
       <section className='sheet-container' style={{width: sheetWidth}}>
         <svg className='sheet-svg' width={sheetWidth}>
-          <rect x='0' y='10' width='20' height='20'/>
+          <Staff/>
+          <Cursor cursor={appState.cursor}/>
         </svg>
       </section>
     )
