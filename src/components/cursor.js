@@ -3,8 +3,8 @@ import * as React from 'react';
 var Cursor = React.createClass({
   render: function () {
     var svgProps = {
-      x: this.props.x,
-      y: this.props.y,
+      x: this.props.cursor.x,
+      y: this.props.cursor.y,
       width: 5,
       height: 5
     };
