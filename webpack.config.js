@@ -13,8 +13,12 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
   ],
   module: {
-    loaders: [
-      {loader: '6to5-loader'}
-    ]
+    loaders: [{
+      test: /.js$/,
+      loader: '6to5-loader'
+    }, {
+      test: /.scss$/,
+      loader: 'style!css!sass'
+    }]
   }
 };
