@@ -1,0 +1,17 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "Note Taker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Woo",
+  "license": "MIT",
+  "devDependencies": {
+    "6to5": "^1.15.0",
+    "6to5-loader": "^0.2.4",
+    "react": "^0.12.2",
+    "webpack": "^1.4.14"
+  }
+}
