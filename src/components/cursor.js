@@ -1,19 +1,25 @@
 import * as React from 'react';
 
+import WholeNote from './whole-note';
+import {createStrikethrough} from './utils/draw-utils.js';
+
+import {
+  notesOffsetX,
+  notesOffsetY
+} from '../globals';
+
+function getTranslate(x, y) {
+  return 'translate(' + x + ',' + y + ')';
+}
+
 var Cursor = React.createClass({
   render: function () {
-    var svgProps = {
-      x: this.props.cursor.x,
-      y: this.props.cursor.y,
-      width: 5,
-      height: 5
-    };
-    // draw a rectangle for now, replace with actual notes later
+    var x = this.props.cursor.x + notesOffsetX;
+    var y = this.props.cursor.y + notesOffsetY;
+    var translate = getTranslate(x, y);
     return (
-      <g>
-        <rect
-          {...svgProps}
-        />
+      <g transform={translate}>
+        {WholeNote}
       </g>
     )
   }
