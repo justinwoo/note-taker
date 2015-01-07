@@ -6,8 +6,8 @@ import {getReactMixin as getDonburiMixin} from 'donburi-model';
 import Sheet from './components/sheet';
 import Model from './model';
 
-window.onkeypress = function (e) {
-  Model.request('onkeypress', e);
+document.onkeydown = function (e) {
+  Model.request('onkeydown', e);
 }
 
 var App = React.createClass({

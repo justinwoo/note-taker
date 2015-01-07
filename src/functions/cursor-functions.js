@@ -43,7 +43,7 @@ var initializeCursorFunctions = function (Model) {
   });
 
   Model.register('cursorMoveUp', function () {
-     cursorShift(
+    cursorShift(
       Model,
       function transform(state) {
         return assign({}, state.cursor, {
@@ -54,7 +54,7 @@ var initializeCursorFunctions = function (Model) {
   });
 
   Model.register('cursorMoveRight', function () {
-     cursorShift(
+    cursorShift(
       Model,
       function transform(state) {
         return assign({}, state.cursor, {
